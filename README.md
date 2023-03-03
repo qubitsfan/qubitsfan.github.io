@@ -1,2 +1,2 @@
 # qubitsfan.github.io
-This is my academic personal page
+this is a academic personal page
