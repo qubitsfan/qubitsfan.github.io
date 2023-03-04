@@ -7,7 +7,11 @@
         <title>
             Welcome to Longxiang's page
         </title>
-        <link rel="stylesheet" href="./jemdoc.css"> 
+        <link rel="stylesheet" href="./jemdoc.css">
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async
+                src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+        </script> 
 
         <style>
             .name::after{
@@ -53,7 +57,7 @@
             </div>
 
             <div class="menu-item">
-                <a href="#"> 2023 </a>
+                2023
             </div>
 
             <div class="menu-category">
@@ -108,14 +112,16 @@
             <ul>
                 <li>Optimal Control of Superconducting Qubits (Optimal Quantum Gates)</li>
                 <li>Implementations of Fault-tolerent Computation on Superconducting Qubits (Surface Code)</li>
-                <li>Applications of Noisy-intermidiate-scale Quantum algorithms on Superconducting Qubits (QA, VQE, QAOA)</li>
+                <li>Applications of Noisy Intermidiate-scale Quantum Algorithms on Superconducting Qubits (QA, VQE, QAOA, etc.)</li>
             </ul>
 
             <blockquote>
                 而世之奇伟、瑰怪，非常之观，常在于险远，而人之所罕至焉，故非有志者不能至也。 &nbsp; &nbsp; ——(宋)王安石
                 <br>
                 The wonderful, strange and extraordinary landscapes of the world are often found 
-                in places that are remote and seldom visited. So people without motivations can not see them.    
+                in places that are remote and seldom visited. 
+                <br>
+                So people without motivations can not see them.    
             </blockquote>
 
             <a name="Education"><h2>Education</h2></a>
@@ -133,36 +139,6 @@
             <table class="imgtable">
                 <tr>
                     <td>
-                        <h3>Bachelor's Degree (2018.9-2022.6)</h3>
-                        
-                        &nbsp; &nbsp; &nbsp;At 2018, I was admitted to University of Science and Technology of China, 
-                        <a href="http://en.scgy.ustc.edu.cn/">School of the Gifted Young</a>, the "00 class".
-                        After that, I choosed to study in Physics, especially in Atomic and Molecular Physics.
-                        <br>
-                        &nbsp; &nbsp; &nbsp;Except for basic Mathematical Analysis, Equations of Mathematical Physics,
-                        Theoretical Mechanics, Electrodynamics, Quantum Mechanics and Statistical Physics, 
-                        I've taken advanced courses such as Introduction to Atomic and Molecular Physics and
-                        Introduction to Quantum Information. Finally, I received <b>85.67/100</b> for 4-year-study with  
-                        Excellent Student Scholarships twice at 2018 and 2020.
-                        <br>
-                        &nbsp; &nbsp; &nbsp;During these years, I began to study and research in Prof.Yiheng Lin's trapped ions group from 2019, 
-                        involving both theoratical simulations and technical assignments. As for simulations, I implemented
-                        <b>Qutip</b> to simulate some many-body systems, such as the <a name="DTC">discrete time crystals on trapped ions</a>.
-                        Besides, I've accumulated sufficient experiences in lab skills, including <b>optics</b>, <b>control theory</b>,
-                        <b>mechanical designing</b> and <b>electric engineering</b> in particular. I've designed and packaged
-                        a <a name="PSD">signal-processing circuit</a> by myself to visualize positions of light. When internship,
-                        I also designed another circuit for <a name="SH">external protection of atom chips</a>.
-                        <br>
-                        &nbsp; &nbsp; &nbsp;As for bachelor's thesis, my topics is mainly   
-                        on <a name="csvqe">Contexual Subspace Variational Quantum Eigensolvers(Cs-VQE)</a> algorithm by trapped ions on 
-                        estimation of ground state of water molecula.
-                    </td>
-                    <td>
-                        <img height=600px alt="Graduation of Undergraduate" src="./Education/graduation_of_undergraduate.jpg"/>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
                         <h3>Master's Degree (2022.10-now)</h3>
                         <p>
                             &nbsp; &nbsp; &nbsp;Since 2022.10, I have been enrolled in QST program...
@@ -172,13 +148,125 @@
 
                     </td>
                 </tr>
+
+                <tr>
+                    <td>
+                        <h3>Bachelor's Degree (2018.9-2022.6)</h3>
+                        <p>
+                            &nbsp; &nbsp; &nbsp;At 2018, I was admitted to University of Science and Technology of China, 
+                        <a href="http://en.scgy.ustc.edu.cn/">School of the Gifted Young</a>, the "\(00\) class".
+                        After that, I choosed to study in Physics, especially in Atomic and Molecular Physics.
+                        </p>
+                        <p>
+                            &nbsp; &nbsp; &nbsp;Except for basic Mathematical Analysis,
+                        Theoretical Mechanics, Electrodynamics, Quantum Mechanics and Statistical Physics, 
+                        I've taken advanced courses such as Introduction to Atomic and Molecular Physics and
+                        Introduction to Quantum Information. Finally, I received <b>85.67/100</b> for 4-year-study with  
+                        Excellent Student Scholarships twice at 2018 and 2020.
+                        </p>
+                        <p>
+                            &nbsp; &nbsp; &nbsp;During my bachelor, I studied and researched at Prof.Yiheng Lin's trapped ions group from 2019, 
+                        involving both theoratical simulations and technical assignments. As for simulations, I implemented
+                        <b>Qutip</b> on a lot of areas, including many-body systems as <a href="#DTC">discrete time crystals</a>
+                        , and geometric phase gates on trapped ions (<a href="GPS">Gate pulse shaping method</a> for Mølmer-Sørensen gate).
+                        Besides, I've accumulated sufficient experiences in lab skills, including <b>optics</b>, <b>control theory</b>,
+                        <b>mechanical designing</b> and <b>electronic designing & engineering</b> in particular. I've designed and packaged
+                        a <a href="#PSD">signal-processing circuit to visualize positions of light</a> by myself. When internship,
+                        I also designed a <a href="#SH">circuit for external protection of atom chips</a>.
+                        </p>
+                        <p>
+                            &nbsp; &nbsp; &nbsp;As for bachelor's thesis, my topics is mainly on 
+                        <a href="#csvqe">Contexual Subspace Variational Quantum Eigensolvers(Cs-VQE)</a> algorithm on trapped ions towards 
+                        estimation of ground state of water molecula. At 2022, I successfully graduated from USTC.
+                        </p>
+                    </td>
+                    <td>
+                        <img height=600px alt="Graduation of Undergraduate" src="./Education/graduation_of_undergraduate.jpg"/>
+                    </td>
+                </tr>
             </table>
 
             <a name="Research"><h2>Research</h2></a>
             <table class="imgtable">
                 <tr>
                     <td>
-                        <h3>Contexual Subsystem VQE on Water Molecular</h3>
+                        <a name="csvqe"><h3>Contexual Subspace VQE on Water Molecula (Bachelor Thesis)</h3></a>
+                        <p>
+                           &nbsp; &nbsp; &nbsp;
+                           Variational Quanutm Eigensolvers (VQE) algorithm is one of the algorithms applied on the 
+                           noisy-intermediate scale quantum processors. It includes quantum
+                           processing units to prepare ansatz states and do mearsurements, and classical processing
+                           units to implement classical optimization algorithms on parameters when preparing ansatz states.
+                        </p>
+                        <p>
+                            &nbsp; &nbsp; &nbsp;
+                            A typical VQE algorithm is to solve the ground state of a certain molecule in quantum chemistry.
+                            The Hamiltonian of the system can be decomposed to sum of tensor products of local Pauli operators.
+                            \[ \hat{H} = \hat{H}_1 + \hat{H}_2 + \cdots + \hat{H}_N\]
+                            VQE is to prepare a universal state in the given Hilbert space by some universal parameters 
+                            \(\vec{\theta}=(\theta_1, \theta_2, ..., \theta_k)\)
+                            and repeat to get each of the expectation values \(\langle H_i\rangle \), then sum them up to get
+                            \(\langle H (\vec{\theta})\rangle\). Now the problem is transformed to a classical optimization 
+                            problem, which can be solved efficiently via classical algorithms or algorithms from machine learning.
+                        </p>
+                        <p>
+                            &nbsp; &nbsp; &nbsp;
+                            But beyond the typical VQE algorithms, Contexual Subspace Variational Quantum Eigensolver is from
+                            the idea that one can solve this problem efficiently in classical methods when the hamiltonian is 
+                            noncontextual. For tensor products of Pauli operators in noncontexual Hamiltonian, it can be expressed as 
+                            product of some basic terms, where the terms are in the set \(Z \cup C_1 \cup C_2 \cup \cdots\cup C_k\). 
+                            Here terms in Z commute with all of the terms in the set, while the terms in any of C set commute with terms
+                            in the same C set but anticommute with terms in other C sets. Due to the structure of noncontexual Hamiltonian,
+                            one can find the least terms in the set with corresponding quantum numbers of the system, and then to classically
+                            find the ground energy of the system by optimizing quantum numbers.
+                        </p>
+                        <p>
+                            &nbsp; &nbsp; &nbsp;
+                            However, contexual problem is not as easy as noncontexual Hamiltonian to be solved just with classical resource, 
+                            so we need quantum computing resource to take the contexuality into account. Thus, we separate the whole system
+                            into  noncontextual part and contexual part.
+                            \[ \hat{H} = \hat{H}_c + \hat{H}_{nc} \]
+                            For noncontexual part, one can construct corresponding quantum number to simulate it classically. Actually, the number 
+                            of terms to be simulated classicaly in determines the dimensions of noncontexual subspace of the given problem. (One 
+                            can reconsider this claim by transforming these terms into \(\hat{\sigma}_z\) or equivalently stabilizer space.)
+                            When we reduce the number of terms in noncontextual part, contexual space can be released and be computed by typical 
+                            variational quantum eigensolver algorthms, without any contradictions to results in unrealised contextual part. 
+                            That is what we called Contextual Subspace Variational Quantum Eigensolvers Algorithme, which leads to reduction 
+                            of numbers of qubis and costs of quantum computing resources.
+                        </p>
+                        <p>
+                            &nbsp; &nbsp; &nbsp;
+                            In my Bachelor's thesis, I've clarrified Cs-VQE algorithm and performed it onto solving the ground state of water 
+                            molecula, where I designed a typical circuits by means of single-qubit and two-qubits gates of trapped ions. 
+                            At last, I simulated my design for 7 qubits in Qiskit with 0.4 H.a. error. 
+                        </p>
+                    </td>
+                    <td>
+                        <img width=400px src="./Research/vqe.png" alt="Variational Quantum Eigensolvers">
+                        <p>Typical Varitional Quantum Eigensolvers Algorithm</p>
+                        <img width=400px src="./Research/noncontextual.png" alt="structure of noncontextual Hamiltonian">
+                        <p>Structure of Noncontextual Hamiltonian</p>
+                        <img width=400px src="./Research/reduction.png" alt="Reduction of a certain problem by Cs-VQE">
+                        <p>Reduction of \(H_2O\) Problem by Cs-VQE</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a name="GPS"><h3>Mølmer-Sørensen Gate Pulse Shaping Technique</h3></a>
+                        <p>
+                            
+                        </p>
+                    </td>
+                    <td>
+                        <img width=400px src="./Research/rabi_frequency.png" alt="Gate Pulse Shape">
+                        <p>Typical Pulse Shape for Optimized MS Gate</p>
+                        <img width=400px src="./Research/phonon_visualization.png" alt="Evolution of Phonon">
+                        <p>Evolution of Phonon under Given Pulse</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a name="SH"><h3>External Protection Circuit of Atomic Chip (Internship)</h3></a>
                     </td>
                     <td>
                         a
@@ -186,7 +274,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <h3>External Protection Circuit of Atomic Chip</h3>
+                        <a name="PSD"><h3>Visualization of Position of Light by Detectors</h3></a> 
                     </td>
                     <td>
                         a
@@ -194,15 +282,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <h3>Visualization of Position of Light by Detectors</h3>
-                    </td>
-                    <td>
-                        a
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <h3>Study of Discrete Time Crystals on Trapped Ions</h3>
+                        <a name="DTC"><h3>Study of Discrete Time Crystals on Trapped Ions</h3></a>
                     </td>
                     <td>
                         a
@@ -211,6 +291,8 @@
             </table>
 
             <a name="Publications"><h2>Publications</h2></a>
+
+            <p>To be continued...</p>
 
             <a name="Gallery"><h2>Gallery</h2></a>
 
