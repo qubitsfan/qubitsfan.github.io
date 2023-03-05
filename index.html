@@ -151,7 +151,7 @@
 
                 <tr>
                     <td>
-                        <h3>Bachelor's Degree (2018.9-2022.6)</h3>
+                        <h3>Bachelor's Degree (2018.09-2022.06)</h3>
                         <p>
                             &nbsp; &nbsp; &nbsp;At 2018, I was admitted to University of Science and Technology of China, 
                         <a href="http://en.scgy.ustc.edu.cn/">School of the Gifted Young</a>, the "\(00\) class".
@@ -188,10 +188,21 @@
             </table>
 
             <a name="Research"><h2>Research</h2></a>
+            <h3>Skills</h3>
+            <ul>
+                <li>
+                    <b>Computer skills</b>: C, Python (especially Qutip and Qiskit), Wolfram Mathematica, and MATLAB, etc.
+                </li>
+                <li>
+                    <b>Wet Laboratory</b>: Circuit board (PCB) designing and drawing based on Altium Designer, Circuit board (PCB) wielding,
+                    Mechanical drawing and processing based on Inventor, Designing and Setting up simple optical system, and Simulation of
+                    multi-physical field coupling model based on Comosol, etc.
+                </li>
+            </ul>
             <table class="imgtable">
                 <tr>
                     <td>
-                        <a name="csvqe"><h3>Contexual Subspace VQE on Water Molecula (Bachelor's Thesis)</h3></a>
+                        <a name="csvqe"><h3>Contexual Subspace VQE on Water Molecula (Bachelor's Thesis, 2022.06)</h3></a>
                         <p>
                            &nbsp; &nbsp; &nbsp;
                            Variational Quanutm Eigensolvers (VQE) algorithm is one of the algorithms applied on the 
@@ -253,7 +264,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <a name="GPS"><h3>Gate Pulse Shaping Technique for Mølmer-Sørensen Gate</h3></a>
+                        <a name="GPS"><h3>Gate Pulse Shaping Technique for Mølmer-Sørensen Gate (2021.10)</h3></a>
                         <p>
                             &nbsp; &nbsp; &nbsp;
                             When comparing to Cirac-Zoller gate, Mølmer-Sørensen gate is more insensitive to the vibrational state 
@@ -330,7 +341,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <a name="SH"><h3>External Protection Circuit of Atomic Chip (Summer Internship)</h3></a>
+                        <a name="SH"><h3>External Protection Circuit of Atomic Chip (Internship, 2021.08)</h3></a>
                         <p>
                             &nbsp; &nbsp; &nbsp;
                             For ultracold atoms experiments, it's necessary to use MOT to trap atoms by 3 pairs of light with different polarizations
@@ -358,23 +369,45 @@
                         </p>
                     </td>
                     <td>
-                        <img width=400px src="./Research/Atomchip.png" alt="Figure of Atom Chip">
+                        <img width=300px src="./Research/Atomchip.png" alt="Figure of Atom Chip">
                         <p>Typical Structure of the Atom Chip</p>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <a name="PSD"><h3>Visualization of Positions of Light by Detectors</h3></a>
+                        <a name="PSD"><h3>Visualization of Positions of Light by Detectors (2021)</h3></a>
                         <p>
                             &nbsp; &nbsp; &nbsp;
-                            
+                            The 2D lateral effect position-sensing detectors, PDP90A by thorlabs, provides an accurate way to measure positions
+                            of light by voltages collected from 4 anodes from corners of the detecting area, namely A, B, C & D.
                         </p> 
+                        <p>
+                            &nbsp; &nbsp; &nbsp;
+                            The 2D lateral effect PSD behaves the same as photondiodes, with a bias cathode to generate photoncurrent in revearse bias regime.
+                            This PSD has a resistive layer on both the anode and cathode photodiode connections so the photoncurent can be transformed into voltage
+                            signals. The typical 5 output voltage signals are \(\Delta x = (A+D)-(B+C)\),\(\Delta y = (A+B)-(C+D)\) & \(SUM = (A+B+C+D)\). 
+                            One can find the information of x and y positions of light by considering the symmetry of the structure with 
+                            \[
+                            x = \frac{L_x}{2} \times \frac{(A+D)-(B+C)}{A+B+C+D} = \frac{L_x \Delta x}{2 SUM}
+                            \]
+                            \[
+                            y = \frac{L_y}{2} \times \frac{(A+B)-(C+D)}{A+B+C+D} = \frac{L_y \Delta y}{2 SUM}
+                            \]
+                        </p>
+                        <p>
+                            &nbsp; &nbsp; &nbsp;
+                            Thus, I designed a paradigm PCB for the double-channel dividing circuit using the operational amplifier and processed
+                            real displacement of beam to the center of sensor by dividing output signals. After that, I welded the circuit board independently 
+                            and packaged the whole electronic system to realize signal division module. To check out the performance of my processing module, 
+                            I designed and built a simple 405nm optical system with a 3-axis adjustable displacement platform for testing. At last,
+                            I analyzed and compared processed output signals with real displacements, which is at least 99.8% linear relevant with 1.032 scale factor. 
+                        </p>
                     </td>
                     <td>
-                        <img width=400px src="./Research/Linear_Effect_Diagram-400.gif" alt="Figure of Atom Chip">
-                        <p>Typical Structure of the Atom Chip</p>
-                        <img width=400px src="./Research/package.jpg" alt="Figure of Atom Chip">
-                        <p>Typical Structure of the Atom Chip</p>
+                        <img width=400px src="./Research/Linear_Effect_Diagram-400.gif" alt="PDP90A by Thorlab">
+                        <p>Technical Information of PDP90A</p>
+                        <img width=300px src="./Research/package.jpg" alt="Circuit Package">
+                        <p>Processing Circuit for Positions of Light</p>
                     </td>
                 </tr>
             </table>
@@ -388,7 +421,12 @@
             <p>To be added...</p>
 
             <a name="Links"><h2>Useful Links</h2></a>
-            
+
+            <a href="https://www.mcqst.de/">Munich Center for Quantum Science and Technology</a>
+            <br>
+            <a href="https://www.wmi.badw.de/home">Walther Meissner Institut</a>
+            <br>
+            <a href="https://arxiv.org/list/quant-ph/recent">Arxiv:Quantum Physcis(Recent)</a>
         </tr>
         </table>        
     </body>
