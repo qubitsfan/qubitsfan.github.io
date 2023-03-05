@@ -333,14 +333,28 @@
                         <a name="SH"><h3>External Protection Circuit of Atomic Chip (Summer Internship)</h3></a>
                         <p>
                             &nbsp; &nbsp; &nbsp;
-                            For ultracold atoms experiments, it's necessary to use MOT to trap the atoms by 3 pairs of lights with different polarizations
-                            and a pair of coils to generate magnetic trap. However we can use reflection of light at the surface of the chip to reduce the 
-                            number of polarized light to 4. Also, we can use the nanostructure on the chip to generate correspongding quadrature magnetic
-                            trap insted of giant coils. The simplification of MOT, which is atom chip, provides a possibilities in trap atoms in a 
-                            small-scale device.
+                            For ultracold atoms experiments, it's necessary to use MOT to trap atoms by 3 pairs of light with different polarizations
+                            and a pair of coils to generate magnetic trap. Alternatively, we can use the reflection of light on the surface of the chip to 
+                            reduce the number of necessary polarized light to 4. 
+                            Also, we can use the nanostructure on the chip to generate correspongding quadrature magnetic trap insted of giant coils. 
+                            This kind of simplification to MOT, which is atom chip, provides a possibilities in trap atoms in a small-scale device.
                         </p>
                         <p>
                             &nbsp; &nbsp; &nbsp;
+                            But due to nanostructure on the chip, there are some constraints on currents to protect the wires from melting. 
+                            There exists two potentially destructive patterns on melting of the wire. 
+                            Once the circuit is working for a long time, the heat from current will accmulate and lead the rise of temperature. 
+                            When temperature is higher than the melting temperature, the wire is broken, which gives the upper limit of power-on time. 
+                            Another constraint comes from the the instantaneous high current from releasing of electrons in the chip, which gives the 
+                            upper limit of current. 
+                        </p>
+                        <p>
+                            &nbsp;&nbsp;&nbsp;
+                            To reach these two requirments, I've designed and revisited a protecting circuit including a integrator circuit and several
+                            comparators. Here the integrator circuit is to integrate input signal with time untiil the output signal exceeds the setting 
+                            voltage, which shorts the wires on the chip and beeps as a warning signal. So the time for current can be controlled under 
+                            such circuit. Besides, the comparators will monitor the peak value of current, which guarantees the maxmium value of value
+                            in case of instantaneous releasing of electrons.
                         </p>
                     </td>
                     <td>
@@ -350,12 +364,14 @@
                 </tr>
                 <tr>
                     <td>
-                        <a name="PSD"><h3>Visualization of Position of Light by Detectors</h3></a> 
+                        <a name="PSD"><h3>Visualization of Positions of Light by Detectors</h3></a>
+                        <p>
+                            &nbsp; &nbsp; &nbsp;
+                            
+                        </p> 
                     </td>
                     <td>
                         <img width=400px src="./Research/Linear_Effect_Diagram-400.gif" alt="Figure of Atom Chip">
-                        <p>Typical Structure of the Atom Chip</p>
-                        <img width=400px src="./Research/optical_system.jpg" alt="Figure of Atom Chip">
                         <p>Typical Structure of the Atom Chip</p>
                         <img width=400px src="./Research/package.jpg" alt="Figure of Atom Chip">
                         <p>Typical Structure of the Atom Chip</p>
