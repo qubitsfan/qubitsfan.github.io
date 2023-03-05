@@ -175,7 +175,7 @@
                         I also designed a <a href="#SH">circuit for external protection of atom chips</a>.
                         </p>
                         <p>
-                            &nbsp; &nbsp; &nbsp;As for bachelor's thesis, my topics is mainly on 
+                            &nbsp; &nbsp; &nbsp;As for bachelor's thesis, it's mainly about 
                         <a href="#csvqe">Contexual Subspace Variational Quantum Eigensolvers(Cs-VQE)</a> algorithm on trapped ions towards 
                         estimation of ground state of water molecula. At 2022, I successfully graduated from USTC.
                         </p>
@@ -190,13 +190,13 @@
             <table class="imgtable">
                 <tr>
                     <td>
-                        <a name="csvqe"><h3>Contexual Subspace VQE on Water Molecula (Bachelor Thesis)</h3></a>
+                        <a name="csvqe"><h3>Contexual Subspace VQE on Water Molecula (Bachelor's Thesis)</h3></a>
                         <p>
                            &nbsp; &nbsp; &nbsp;
                            Variational Quanutm Eigensolvers (VQE) algorithm is one of the algorithms applied on the 
                            noisy-intermediate scale quantum processors. It includes quantum
-                           processing units to prepare ansatz states and do mearsurements, and classical processing
-                           units to implement classical optimization algorithms on parameters when preparing ansatz states.
+                           processing units to prepare ansatz states to be mearsured, and classical processing
+                           units to implement classical algorithms to optimize parameters when preparing ansatz states.
                         </p>
                         <p>
                             &nbsp; &nbsp; &nbsp;
@@ -205,8 +205,8 @@
                             \[ \hat{H} = \hat{H}_1 + \hat{H}_2 + \cdots + \hat{H}_N\]
                             VQE is to prepare a universal state in the given Hilbert space by some universal parameters 
                             \(\vec{\theta}=(\theta_1, \theta_2, ..., \theta_k)\)
-                            and repeat to get each of the expectation values \(\langle H_i\rangle \), then sum them up to get
-                            \(\langle H (\vec{\theta})\rangle\). Now the problem is transformed to a classical optimization 
+                            and repeat to get each of the expectation values \(\langle \hat{H}_i\rangle \), then sum them up to get
+                            \(\langle \hat{H} (\vec{\theta})\rangle\). Now the problem is transformed to a classical optimization 
                             problem, which can be solved efficiently via classical algorithms or algorithms from machine learning.
                         </p>
                         <p>
@@ -215,7 +215,7 @@
                             the idea that one can solve this problem efficiently in classical methods when the hamiltonian is 
                             noncontextual. For tensor products of Pauli operators in noncontexual Hamiltonian, it can be expressed as 
                             product of some basic terms, where the terms are in the set \(Z \cup C_1 \cup C_2 \cup \cdots\cup C_k\). 
-                            Here terms in Z commute with all of the terms in the set, while the terms in any of C set commute with terms
+                            Here terms in Z commute with any terms in this set, while the terms in any of C set commute with terms
                             in the same C set but anticommute with terms in other C sets. Due to the structure of noncontexual Hamiltonian,
                             one can find the least terms in the set with corresponding quantum numbers of the system, and then to classically
                             find the ground energy of the system by optimizing quantum numbers.
@@ -254,7 +254,31 @@
                     <td>
                         <a name="GPS"><h3>Mølmer-Sørensen Gate Pulse Shaping Technique</h3></a>
                         <p>
-                            
+                            &nbsp; &nbsp; &nbsp;
+                            When comparing to Cirac-Zoller gate, Mølmer-Sørensen gate is more insensitive to the vibrational state 
+                            of the system and robust against changes in the vibrational number during gate operation. Mølmer-Sørensen gate
+                            is also one of the most widely used geometric phase gate on trapped ions.
+                        </p>
+                        <p>
+                            &nbsp; &nbsp; &nbsp;
+                            Considering a chain of N trapped ions interacting a pair of bichromatic light (detuning \(\pm(\omega_k +\mu\)), 
+                            phase \(\phi_r + \phi_b = \pi\)), the bichromatic Hamiltonian is
+                            \[
+                            H_{MS}=\sum_i\sum_{k=1}^N\Omega_i\eta_{i,k}\cos(\mu t - \phi_i^m)(\hat{a}_k e^{-i\omega_k t}+\hat{a}_k^\dagger e^{i\omega_k t})
+                            \hat{\sigma}_{x}^i
+                            \]
+                        </p>
+                        <p>
+                            &nbsp; &nbsp; &nbsp;
+                            By means of Magnus formula, we can obtain the time evolution operator under such Hamiltonian
+                            \[
+                            \begin{aligned}
+                            \hat{U}(\tau) 
+                            &= \exp [- i \int_0^\tau dt \hat{H}_{MS}(t) - \frac{1}{2} \int_0^\tau dt_2 \int_0^{t_2} dt_1 [\hat{H}_{MS}(t_2), \hat{H}_{MS}(t_1)]] \\
+                            &=\exp[\sum_i\sum_{k=1}^N(\alpha_{i,k}(\tau)\hat{a}_k^\dagger+\alpha_{i,k}^*(\tau)\hat{a}_k)\hat{\sigma}_x^i+i\sum_{i,j}\chi_{i,j}\hat{\sigma}_x^i\hat{\sigma}_x^j]            
+                            \end{aligned}              
+                            \]
+
                         </p>
                     </td>
                     <td>
