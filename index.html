@@ -86,8 +86,8 @@
                             I am currently a master student in Quantum Science & Technology program in <a href="https://www.tum.de/">Technical University of Munich</a>. 
                             At 2022, I obtained the Bachelor's Degree in Physics (Atomic and Molecular Physics) in 
                             <a href="https://en.ustc.edu.cn/">University of Science and Technology of China</a>.
-                            During the undergraduate education, I've been mainly involved in the quantum simulations and computation of <b>Trapped Ions</b>,
-                            including Cs-VQE on water molecula and simulaiton of discrete time crystals. At 2021, I also did some projects on <b>Atom Chips</b> 
+                            During the undergraduate education, I've been mainly involved in the quantum simulation and computation on <b>Trapped Ions</b>,
+                            including Cs-VQE on water molecule and discrete time crystals. At 2021, I also did some projects on <b>Atom Chips</b> 
                             for internship at <a href="http://english.siom.cas.cn/">Shanghai Institute of Optics and Fine Mechanics</a>.
                             Now I am quite interested in quantum computation and relevant NISQ algorithms on <b>Circuit QED</b> and eager to discover further.
                             (<a href="./CV.pdf">Full CV</a>) 
@@ -167,7 +167,7 @@
                         <p>
                             &nbsp; &nbsp; &nbsp;During my bachelor, I studied and researched at Prof.Yiheng Lin's trapped ions group from 2019, 
                         involving both theoratical simulations and technical assignments. As for simulations, I implemented
-                        <b>Qutip</b> on a lot of areas, including many-body systems as <a href="#DTC">discrete time crystals</a>
+                        <b>Qutip</b> on a lot of areas, including many-body systems as discrete time crystals
                         , and geometric phase gates on trapped ions (<a href="GPS">Gate pulse shaping method</a> for Mølmer-Sørensen gate).
                         Besides, I've accumulated sufficient experiences in lab skills, including <b>optics</b>, <b>control theory</b>,
                         <b>mechanical designing</b> and <b>electronic designing & engineering</b> in particular. I've designed and packaged
@@ -175,9 +175,10 @@
                         I also designed a <a href="#SH">circuit for external protection of atom chips</a>.
                         </p>
                         <p>
-                            &nbsp; &nbsp; &nbsp;As for bachelor's thesis, it's mainly about 
-                        <a href="#csvqe">Contexual Subspace Variational Quantum Eigensolvers(Cs-VQE)</a> algorithm on trapped ions towards 
-                        estimation of ground state of water molecula. At 2022, I successfully graduated from USTC.
+                            &nbsp; &nbsp; &nbsp;
+                        As for bachelor's thesis, it's mainly about 
+                        <a href="#csvqe">Contexual Subspace Variational Quantum Eigensolvers (Cs-VQE)</a> algorithm on trapped ions towards 
+                        estimation of ground state of water molecule. At 2022, I successfully graduated from USTC.
                         </p>
                     </td>
                     <td>
@@ -231,13 +232,13 @@
                             can reconsider this claim by transforming these terms into \(\hat{\sigma}_z\) or equivalently stabilizer space.)
                             When we reduce the number of terms in noncontextual part, contexual space can be released and be computed by typical 
                             variational quantum eigensolver algorthms, without any contradictions to results in unrealised contextual part. 
-                            That is what we called Contextual Subspace Variational Quantum Eigensolvers Algorithme, which leads to reduction 
+                            That is what we called Contextual Subspace Variational Quantum Eigensolvers Algorithm, leading to reduction 
                             of numbers of qubis and costs of quantum computing resources.
                         </p>
                         <p>
                             &nbsp; &nbsp; &nbsp;
                             In my Bachelor's thesis, I've clarrified Cs-VQE algorithm and performed it onto solving the ground state of water 
-                            molecula, where I designed a typical circuits by means of single-qubit and two-qubits gates of trapped ions. 
+                            molecule, where I designed a typical circuits by means of single-qubit and two-qubits gates of trapped ions. 
                             At last, I simulated my design for 7 qubits in Qiskit with 0.4 H.a. error. 
                         </p>
                     </td>
@@ -252,7 +253,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <a name="GPS"><h3>Mølmer-Sørensen Gate Pulse Shaping Technique</h3></a>
+                        <a name="GPS"><h3>Gate Pulse Shaping Technique for Mølmer-Sørensen Gate</h3></a>
                         <p>
                             &nbsp; &nbsp; &nbsp;
                             When comparing to Cirac-Zoller gate, Mølmer-Sørensen gate is more insensitive to the vibrational state 
@@ -267,30 +268,69 @@
                             H_{MS}=\sum_i\sum_{k=1}^N\Omega_i\eta_{i,k}\cos(\mu t - \phi_i^m)(\hat{a}_k e^{-i\omega_k t}+\hat{a}_k^\dagger e^{i\omega_k t})
                             \hat{\sigma}_{x}^i
                             \]
-                        </p>
-                        <p>
-                            &nbsp; &nbsp; &nbsp;
-                            By means of Magnus formula, we can obtain the time evolution operator under such Hamiltonian
+
+                            By means of Magnus formula, we can obtain the time evolution operator under Hamiltonian
                             \[
                             \begin{aligned}
                             \hat{U}(\tau) 
                             &= \exp [- i \int_0^\tau dt \hat{H}_{MS}(t) - \frac{1}{2} \int_0^\tau dt_2 \int_0^{t_2} dt_1 [\hat{H}_{MS}(t_2), \hat{H}_{MS}(t_1)]] \\
-                            &=\exp[\sum_i\sum_{k=1}^N(\alpha_{i,k}(\tau)\hat{a}_k^\dagger+\alpha_{i,k}^*(\tau)\hat{a}_k)\hat{\sigma}_x^i+i\sum_{i,j}\chi_{i,j}\hat{\sigma}_x^i\hat{\sigma}_x^j]            
+                            &=\exp[\sum_i\sum_{k=1}^N(\alpha_{i,k}(\tau)\hat{a}_k^\dagger+\alpha_{i,k}^*(\tau)\hat{a}_k)\hat{\sigma}_x^i+i\sum_{i,j}\chi_{i,j}(\tau)\hat{\sigma}_x^i\hat{\sigma}_x^j]            
                             \end{aligned}              
                             \]
 
+                            Here the single spin operators part indicates a time-dependent displacement operator acts on phonon parts with eigenvalue \(\alpha_i^k(\tau)\)
+                            , including all of the vibration modes of the ion chain. The double spin operators term indicates the accumulation of a geometric phase \(\chi_{i,j}(\tau)\)
+                            between two typical trapped ions. This spin-spin interaction term could be used to implement C-NOT gate in trapped ions.
+                        </p>
+                        <p>
+                            &nbsp; &nbsp; &nbsp;
+                            However, with the growing number of trapped ions, frequencies of different vibrational modes will get closer, leading to residual excitation
+                            to other vibrational modes, which is a barrier for improving fidelity of the gate. Here the gate pulse shaping technique is introduced to 
+                            design the shpae of the laser pule to optimally control the evolution of vibrational modes as dynamical decoupling. 
+                            \[
+                            \begin{equation}
+                            \Omega_i(t) = \Omega(t) = \left\{
+                            \begin{aligned}
+                            & \Omega_1 \quad 0 < t \leq \tau / P \\ 
+                            & \Omega_2 \quad \tau / P < t \leq 2\tau / P \\ 
+                            & \cdots \\
+                            & \Omega_P \quad (P - 1)\tau / P < t \leq \tau \\ 
+                            \end{aligned}
+                            \right.
+                            \end{equation}
+                            \]
+
+                            After that, one can rewrite the accumulating phase \(\chi_{i,j}(\tau)\) and fidelity of the gate \(\mathcal{F}\) into matrix form 
+                            by considering the rabi frequency as a vector \(\symbf{\Omega}\). Then problem is transformed to an classical optimization
+                            \[
+                            \left \{
+                            \begin{aligned}
+                            &\chi_{ij}(\tau) = \symbf{\Omega}^T D^{ij} \symbf{\Omega} \neq 0 \\
+                            &\min_{\symbf{\Omega}} (1 - \mathcal{F}) = \symbf{\Omega}^T B \symbf{\Omega}
+                            \end{aligned}
+                            \right .
+                            \]
+
+                            This problem is a typical constrained optimization, which can be solved effeciently with Lagrange multiplier.
+                        </p>
+                        <p>
+                            &nbsp;&nbsp;&nbsp;
+                            In this project, I've written a program to optimize the pulse shape in different detuning domains
+                            and simulated the evolution of quantum system with qutip, in both phonon and spin part.
                         </p>
                     </td>
                     <td>
                         <img width=400px src="./Research/rabi_frequency.png" alt="Gate Pulse Shape">
                         <p>Typical Pulse Shape for Optimized MS Gate</p>
                         <img width=400px src="./Research/phonon_visualization.png" alt="Evolution of Phonon">
-                        <p>Evolution of Phonon under Given Pulse</p>
+                        <p>Evolution of Phonon Part under Optimized Pulse</p>
+                        <img width=400px src="./Research/spin_visualization.png" alt="Evolution of Spin">
+                        <p>Evolution of Spin Part under Optimized Pulse</p>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <a name="SH"><h3>External Protection Circuit of Atomic Chip (Internship)</h3></a>
+                        <a name="SH"><h3>External Protection Circuit of Atomic Chip (Summer Internship)</h3></a>
                     </td>
                     <td>
                         a
@@ -304,14 +344,6 @@
                         a
                     </td>
                 </tr>
-                <tr>
-                    <td>
-                        <a name="DTC"><h3>Study of Discrete Time Crystals on Trapped Ions</h3></a>
-                    </td>
-                    <td>
-                        a
-                    </td>
-                </tr>
             </table>
 
             <a name="Publications"><h2>Publications</h2></a>
@@ -319,6 +351,8 @@
             <p>To be continued...</p>
 
             <a name="Gallery"><h2>Gallery</h2></a>
+
+            <p>To be added...</p>
 
             <a name="Links"><h2>Useful Links</h2></a>
             
