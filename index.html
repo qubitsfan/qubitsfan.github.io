@@ -90,7 +90,7 @@
                             including Cs-VQE on water molecule and discrete time crystals. At 2021, I also did some projects on <b>Atom Chips</b> 
                             for internship at <a href="http://english.siom.cas.cn/">Shanghai Institute of Optics and Fine Mechanics</a>.
                             Now I am quite interested in quantum computation and relevant NISQ algorithms on <b>Circuit QED</b> and eager to discover further.
-                            (<a href="./CV.pdf">Full CV</a>) 
+                            (<a href="./CV.pdf">Full CV</a> by 2023.03) 
                         </p>
                         <br>
                         <br>
@@ -196,7 +196,7 @@
                 <li>
                     <b>Wet Laboratory</b>: Circuit board (PCB) designing and drawing based on Altium Designer, Circuit board (PCB) wielding,
                     Mechanical drawing and processing based on Inventor, Designing and Setting up simple optical system, and Simulation of
-                    multi-physical field coupling model based on Comosol, etc.
+                    multi-physical field coupling model based on COMSOL, etc.
                 </li>
             </ul>
             <table class="imgtable">
@@ -234,23 +234,26 @@
                         </p>
                         <p>
                             &nbsp; &nbsp; &nbsp;
-                            However, contexual problem is not as easy as noncontexual Hamiltonian to be solved just with classical resource, 
-                            so we need quantum computing resource to take the contexuality into account. Thus, we separate the whole system
-                            into  noncontextual part and contexual part.
+                            However, contexual problem is not as easy as noncontexual Hamiltonian to be solved just with classical resource.
+                            But we can reduces the cost of quantum reource by restricting our system into the subsystem of original Hilbert space. 
+                            That is what we called Contextual Subspace Variational Quantum Eigensolvers Algorithm, leading to reduction 
+                            of numbers of qubis and costs of quantum computing resources.
+                        </p>
+                        <p>
+                            &nbsp; &nbsp; &nbsp;
+                            Thus, we separate the whole system into  noncontextual part and contexual part.
                             \[ \hat{H} = \hat{H}_c + \hat{H}_{nc} \]
                             For noncontexual part, one can construct corresponding quantum number to simulate it classically. Actually, the number 
                             of terms to be simulated classicaly in determines the dimensions of noncontexual subspace of the given problem. (One 
                             can reconsider this claim by transforming these terms into \(\hat{\sigma}_z\) or equivalently stabilizer space.)
                             When we reduce the number of terms in noncontextual part, contexual space can be released and be computed by typical 
                             variational quantum eigensolver algorthms, without any contradictions to results in unrealised contextual part. 
-                            That is what we called Contextual Subspace Variational Quantum Eigensolvers Algorithm, leading to reduction 
-                            of numbers of qubis and costs of quantum computing resources.
                         </p>
                         <p>
                             &nbsp; &nbsp; &nbsp;
                             In my Bachelor's thesis, I've clarrified Cs-VQE algorithm and performed it onto solving the ground state of water 
                             molecule, where I designed a typical circuits by means of single-qubit and two-qubits gates of trapped ions. 
-                            At last, I simulated my design for 7 qubits in Qiskit with 0.4 H.a. error. 
+                            At last, I simulated designed quantum circuit for 7 qubits in Qiskit reaching the result with 0.4 H.a. error. 
                         </p>
                     </td>
                     <td>
@@ -398,9 +401,12 @@
                             &nbsp; &nbsp; &nbsp;
                             Thus, I designed a paradigm PCB for the double-channel dividing circuit using the operational amplifier and processed
                             real displacement of beam to the center of sensor by dividing output signals. After that, I welded the circuit board independently 
-                            and packaged the whole electronic system to realize signal division module. To check out the performance of my processing module, 
-                            I designed and built a simple 405nm optical system with a 3-axis adjustable displacement platform for testing. At last,
-                            I analyzed and compared processed output signals with real displacements, which is at least 99.8% linear relevant with 1.032 scale factor. 
+                            and packaged the whole electronic system to realize signal division module. 
+                        </p>
+                        <p>                            
+                            &nbsp; &nbsp; &nbsp;
+                            To check out the performance of my processing module,  I designed and built a simple 405nm optical system with a 3-axis adjustable displacement platform for testing. 
+                            At last, I analyzed and compared processed output signals with real displacements, which is at least 99.8% linear relevant with 1.032 scale factor. 
                         </p>
                     </td>
                     <td>
