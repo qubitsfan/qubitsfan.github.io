@@ -1,7 +1,7 @@
 {
   "basics": {
     "name": "Longxiang Huang",
-    "label": "",
+    "label": "Master Student in Quantum Technology",
     "image": "Portrait.jpg",
     "email": "Longxiang.Huang@wmi.badw.de",
     "phone": "",
@@ -34,10 +34,7 @@
       "score": "10",
       "courses": ["QST Experiment: Quantum Hardware",
                   "QST Theory: Quantum Information",
-                  "Quantum Optics 1",
-                  "Quantum Computing with Superconducting Qubits: architecture and algorithms",
-                  "Ultra-Cold Quantum Gases 1",
-                  "Tensor Networks"]
+                  "Quantum Computing with Superconducting Qubits: architecture and algorithms"]
     },
     {
       "institution": "University of Science and Technology of China, Hefei, China",
@@ -53,13 +50,13 @@
                   "Introduction to Nuclear and Particle Physics"]
     }
   ],
-  "awards": [
+  "honors": [
     {
-      "title": "Nobel Prize in Physics",
-      "date": "1921-11-01",
-      "awarder": "Royal Swedish Academy of Sciences",
-      "url": "https://www.nobelprize.org/prizes/physics/1921/einstein/biographical/",
-      "summary": "The Nobel Prizes are five separate prizes that, according to Alfred Nobel's will of 1895, are awarded to 'those who, during the preceding year, have conferred the greatest benefit to humankind.'"
+      "title": "TUM Deutschlandstipenduim 23/24",
+      "date": "",
+      "awarder": "",
+      "url": "https://www.tum.de/en/studies/fees-and-financial-aid/scholarships/tum-scholarships/deutschlandstipendium",
+      "summary": ""
     }
   ],
   "publications": [
