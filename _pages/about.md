@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='https://www.wmi.badw.de'>Walther-Meißner-Institut</a>
+subtitle: 
 
 profile:
   align: right
@@ -13,9 +13,9 @@ profile:
     <p>Walther-Meißner-Straße 8</p>
     <p>Garching, Germany 85748</p>
 
-news: true # includes a list of news items
+news:  # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
-social: true # includes social icons at the bottom of the page
+social:  # includes social icons at the bottom of the page
 ---
 
 I am currently a master student enrolled in Quantum Science & Technology program in [Technical University of Munich](https://www.tum.de/) and work in [Walther-Meißner-Institut](https://www.wmi.badw.de). 
