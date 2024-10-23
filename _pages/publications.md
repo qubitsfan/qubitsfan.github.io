@@ -9,7 +9,7 @@ nav_order: 2
 
 <div class="container">
 
-<img src="../assets/img/Feynman.jpg">
+<img src="../assets/img/Feynman.jpg" width: 100%>
 
 </div>
 
