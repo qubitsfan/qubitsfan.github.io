@@ -7,6 +7,8 @@ nav: true
 nav_order: 2
 ---
 
+<img src="assets\img\Feynman.jpg">
+
 <!-- _pages/publications.md -->
 <div class="publications">
 
