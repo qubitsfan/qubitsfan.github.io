@@ -7,12 +7,6 @@ nav: true
 nav_order: 2
 ---
 
-<div class="container">
-
-<img src="../assets/img/Feynman.jpg" width: 100%>
-
-</div>
-
 <!-- _pages/publications.md -->
 <div class="publications">
 
