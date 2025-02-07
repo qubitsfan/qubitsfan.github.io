@@ -90,14 +90,14 @@ div.container-links {
 // }
 
 /* Modify the container-pdf class */
-.container-pdf {
+div.container-pdf {
   display: flex;
   justify-content: space-between; /* Aligns items to the left and right */
   align-items: center; /* Vertically aligns the content */
 }
 
 /* Apply styles for the image (portrait) */
-.container-pdf image {
+div.container-pdf img {
   width: 150px;
   height: 150px;
   border-radius: 50%;  /* Makes the image round */
