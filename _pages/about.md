@@ -9,7 +9,7 @@ profile:
   image: IMG_4561.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>Room 128</p>
+    <p>Room 134</p>
     <p>Walther-Meißner-Straße 8</p>
     <p>Garching, Germany 85748</p>
 
